@@ -1,0 +1,31 @@
+h1, h2 {
+  text-transform: uppercase;
+}
+
+.content {
+  padding-left: 100px;
+
+  > div {
+    padding-bottom: 100px;
+
+    a {
+      margin: 20px 0;
+    }
+  }
+}
+
+.textcode {
+  width: 100%;
+  background-color: whitesmoke;
+  font-size: 18px;
+  resize: none;
+  white-space: nowrap;
+  line-height: .5;
+  padding: 10px;
+}
+
+.exampleDiv {
+  padding: 10px;
+  border: solid 1px grey;
+  border-radius: 10px;
+}

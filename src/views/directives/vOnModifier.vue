@@ -1,5 +1,5 @@
 <template>
-  <div>v-model</div>
+  <div>Event Modifier</div>
 </template>
 
 <script>

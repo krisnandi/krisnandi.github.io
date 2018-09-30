@@ -1,11 +1,10 @@
 <template>
-  <aside class="menu has-text-left">
+  <aside class="menu has-text-left column is-2">
     <p class="menu-label">
       Directives
     </p>
     <ul class="menu-list">
-      <!-- <li><a>Dashboard</a></li> -->
-      <li><router-link v-for="(menu, index) in menus" :key="index" :to="menu.name">{{menu.name}}</router-link></li>
+      <li><router-link v-for="(menu, index) in menus" :key="index" :to="toPath(menu.path)">{{menu.name}}</router-link></li>
     </ul>
   </aside>
 </template>
@@ -16,6 +15,11 @@ export default {
   computed: {
     menus () {
       return this.$router.options.routes[1].children
+    },
+  },
+  methods: {
+    toPath (path) {
+      return this.$router.options.routes[1].path + '/' + path
     },
   },
 }

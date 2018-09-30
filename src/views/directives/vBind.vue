@@ -1,43 +1,49 @@
 <template>
   <div>
-    <h2>v-bind</h2>
-    Interpolation only works in the tag content. You can’t use it on attributes.
-    Attributes must use v-bind:
-    <pre v-text="code1"></pre>
-
-    v-bind is so common that there is a shorthand syntax for it:
-    <pre v-text="code2"></pre>
-    <br>
-
-    <h4>Example:</h4>
-    we have parameter <b>url</b> with no default value, try change it's value to specific url
-    <div class="field">
-      <span class="control">
-        <input class="input" type="text" placeholder="edit name" v-model="url">
-      </span>
+    <div>
+      <h2>v-bind</h2>
+      Interpolation only works in the tag content. You can’t use it on attributes.
+      Attributes must use v-bind:
     </div>
-    <br>
 
-    result:
-    <blockquote>
-      <a v-bind:href="url">{{ linkText }}</a>
-      <br>
-      <a :href="url">{{ linkText }}</a>
-    </blockquote>
+
+    <div>
+      <h4>Sample Code:</h4>
+      <pre>{{sample}}</pre>
+    </div>
+    
+    <div>
+      <h4>Runable Example:</h4>
+
+      we have parameter <b>url</b> check the web inspect, also try change it's to see the difference.
+      <div class="field">
+        <span class="control">
+          <input class="input" type="text" placeholder="edit name" v-model="url">
+        </span>
+      </div>
+
+      result:
+      <blockquote>
+        <example :url="url" />
+      </blockquote>
+    </div>
   </div>
 </template>
 
 <script>
+import sample from './sample/vbind.txt'
+import example from './example/vbind'
+
 export default {
   name: 'vBind',
   data () {
     return {
-      url: '',
-      linkText: 'Click me!',
-      code1: '<a v-bind:href="url">{{ linkText }}</a>',
-      code2: `<a v-bind:href="url">{{ linkText }}</a>
-<a :href="url">{{ linkText }}</a>`,
+      url: 'https://dana.id/',
+      sample,
     }
+  },
+  components: {
+    example,
   },
 }
 </script>

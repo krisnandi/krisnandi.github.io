@@ -1,34 +1,41 @@
 <template>
   <div>
-    <h2>v-for</h2>
-    allows you to render a list of items from Array or Object.
-    <br>
-    <br>
+    <div>
+      <h2>v-for</h2>
+      allows you to render a list of items from Array or Object.
+    </div>
+    
+    <div>
+      <h4>Sample Code:</h4>
+      <pre>{{sample}}</pre>
+    </div>
+    
+    <div>
+      <h4>Runable Example 1:</h4>
+      Use array to define Item list
+      <pre>{{ arrayItems }}</pre>
+      result:
+      <blockquote>
+        <example :items="arrayItems" />
+      </blockquote>
+    </div>
 
-    <h4>Example loop of Array:</h4>
-    Array:
-    <pre>items: ['car', 'bike', 'dog']</pre>
-    logic:
-    <pre v-text="arrayCode"></pre>
-    result:
-    <blockquote><ul><li v-for="(item, index) in arrayItems" :key="index">{{ item }}</li></ul></blockquote>
-    <br><br>
-
-    <h4>Example loop of Object:</h4>
-    Array:
-    <pre>obejctItems: {
-  key1: 'batman',
-  key2: 'spiderman',
-  key3: 'humanman',
-}</pre>
-    logic:
-    <pre v-text="objectCode"></pre>
-    result:
-    <blockquote><ul><li v-for="(item, index) in objectItem" :key="index">{{ item }}</li></ul></blockquote>
+    <div>
+      <h4>Runable Example 2:</h4>
+      Use object to define Item list
+      <pre>{{ objectItem }}</pre>
+      result:
+      <blockquote>
+        <example :items="objectItem" />
+      </blockquote>
+    </div>
   </div>
 </template>
 
 <script>
+import sample from './sample/vfor.txt'
+import example from './example/vfor'
+
 export default {
   name: 'vFor',
   data () {
@@ -39,13 +46,11 @@ export default {
         key2: 'spiderman',
         key3: 'humanman',
       },
-      arrayCode: `<ul>
-  <li v-for="(item, index) in arrayItems" :key="index">{{ item }}</li>
-</ul>`,
-      objectCode: `<ul>
-  <li v-for="(item, index) in objectItem" :key="index">{{ item }}</li>
-</ul>`,
+      sample,
     }
+  },
+  components: {
+    example,
   },
 }
 </script>

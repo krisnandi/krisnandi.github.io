@@ -1,48 +1,39 @@
 <template>
   <div>
-    <h2>v-on</h2>
-    It allows you to listen to DOM events, and trigger a method when the event happens.
-    <pre v-text="code1"></pre>
+    <div>
+      <h2>v-on</h2>
+      It allows you to listen to DOM events, and trigger a method when the event happens.
+    </div>
 
-    v-on is so common that there is a shorthand syntax for it, @:
-    <pre v-text="code2"></pre>
-    <br>
-
-    <h4>Example:</h4>
-    we have function handleClick, which will showing alert.
-    <pre v-text="code3"></pre>
-    <br>
-
-    click the link to see the result:
-    <blockquote>
-      <a v-on:click="handleClick">Click me!</a>
-      <br>
-      <a @:click="handleClick">Click me!</a>
-    </blockquote>
+    <div>
+      <h4>Sample Code:</h4>
+      <pre>{{sample}}</pre>
+    </div>
+    
+    <div>
+      <h4>Runable Example:</h4>
+      we have function handleClick, which will showing alert. click the link to see the result, then check the web inspector to see the detail.
+      <blockquote>
+        <example />
+      </blockquote>
+    </div>
   </div>
 </template>
 
+
 <script>
+import sample from './sample/von.txt'
+import example from './example/von'
+
 export default {
   name: 'vOn',
   data () {
     return {
-      url: '',
-      linkText: 'Click me!',
-      code1: '<a v-on:click="handleClick">Click me!</a>',
-      code2: `<a v-on:click="handleClick">Click me!</a>
-<a @:click="handleClick">Click me!</a>`,
-      code3: `methods: {
-  handleClick () {
-    alert('test')
-  }
-}`,
+      sample,
     }
   },
-  methods: {
-    handleClick () {
-      alert('test')
-    },
+  components: {
+    example,
   },
 }
 </script>

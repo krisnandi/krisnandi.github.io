@@ -1,33 +1,45 @@
 <template>
   <div>
-    <h2>v-if</h2>
-    Show an element only if the conditional is true
-    <pre v-text="code1"></pre>
-    <br>
-    
-    <h4>Example:</h4>
-    We have parameter <b>isTrue</b>, try change the value by checking the checkbox.
     <div>
-      <label class="checkbox">
-        <input type="checkbox" v-model="isTrue">
-        isTrue Value
-      </label>
+      <h2>v-if</h2>
+      Show an element only if the conditional is true
     </div>
-    <br>
+    
+    <div>
+      <h4>Sample Code:</h4>
+      <pre>{{sample}}</pre>
+    </div>
+    
+    <div>
+      <h4>Runable Example:</h4>
+      We have boolean parameter, try change the value by checking the checkbox.
+      <div>
+        <label class="checkbox">
+          <input type="checkbox" v-model="isTrue">
+          isTrue Value
+        </label>
+      </div>
 
-    result:
-    <blockquote><p v-if="isTrue">Anjash!</p></blockquote>
+      result:
+      <blockquote><example :isTrue="isTrue"/></blockquote>
+    </div>
   </div>
 </template>
 
 <script>
+import sample from './sample/vif.txt'
+import example from './example/vif'
+
 export default {
   name: 'vIf',
   data () {
     return {
       isTrue: false,
-      code1: '<p v-if="isTrue">Anjash!</p>',
+      sample,
     }
+  },
+  components: {
+    example,
   },
 }
 </script>

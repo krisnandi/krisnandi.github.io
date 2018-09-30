@@ -1,32 +1,44 @@
 <template>
   <div>
-    <h2>v-html</h2>
-    There are cases when you want to output HTML and make the browser interpret it. You can use the v-html directive:
-    <pre v-text="code1"></pre>
-    <br>
-
-    <h4>Example:</h4>
-    Try inputing any HTML format,
-    <textarea class="textarea" v-model="htmlValue"></textarea>
-    <br>
-
-    result:
-    <div class="exampleDiv">
-      <div v-html="htmlValue" />
+    <div>
+      <h2>v-html</h2>
+      There are cases when you want to output HTML and make the browser interpret it. You can use the v-html directive:
     </div>
 
-    <a class="button is-warning" @click="surprise1">Press me!!</a>
-    <a class="button is-primary" @click="surprise2">Press me!!</a>
+    <div>
+      <h4>Sample Code:</h4>
+      <pre>{{sample}}</pre>
+    </div>
+
+    <div>
+      <h4>Runable Example:</h4>
+      Try inputing any text with HTML format,
+      <textarea class="textarea" v-model="htmlValue"></textarea>
+      <a class="button is-warning" @click="surprise1">Press me!!</a>
+      <a class="button is-primary" @click="surprise2">Press me!!</a>
+      <br>
+
+      result:
+      <div class="exampleDiv">
+        <example :input="htmlValue"></example>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import sample from './sample/vhtml.txt'
+import example from './example/vhtml'
+
 export default {
   name: 'vHtml',
+  components: {
+    example,
+  },
   data () {
     return {
+      sample,
       htmlValue: '<div><b>Foo Bar</b></div>',
-      code1: '<div v-html="htmlValue" />',
       example1: `<div class="card">
   <div class="card-content">
     <p class="title">

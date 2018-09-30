@@ -14,6 +14,10 @@ import vIfAndShow from '@/views/directives/vIfAndShow'
 import vFor from '@/views/directives/vFor'
 import vBind from '@/views/directives/vBind'
 import vOn from '@/views/directives/vOn'
+import vOnModifier from '@/views/directives/vOnModifier'
+import vModel from '@/views/directives/vModel'
+import vModelComponent from '@/views/directives/vModelComponent'
+import vCustom from '@/views/directives/vCustom'
 
 Vue.use(Router)
 
@@ -92,6 +96,26 @@ export default new Router({
           path: 'vOn',
           name: 'v-on',
           component: vOn,
+        },
+        {
+          path: 'vOnModifier',
+          name: 'v-on-modifier',
+          component: vOnModifier,
+        },
+        {
+          path: 'vModel',
+          name: 'v-model',
+          component: vModel,
+        },
+        {
+          path: 'vModelComponent',
+          name: 'v-model for component',
+          component: vModelComponent,
+        },
+        {
+          path: 'customDirective',
+          name: 'custom directive',
+          component: vCustom,
         },
       ],
     },

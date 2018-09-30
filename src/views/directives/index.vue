@@ -2,7 +2,7 @@
   <div class="container is-flex has-text-left is-fullwidth">
     <div class="columns">
       <tableOfContent />
-      <div class="content column is-narrow">
+      <div class="content column is-8">
         <router-view/>
       </div>
     </div>

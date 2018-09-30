@@ -2,7 +2,18 @@
   <div>
     <div>
       <h2>v-if vs v-show</h2>
-      <h4>Example:</h4>
+      Very similar to v-if, the v-show directive can also be used to show and hide an element based on an expression.
+      <br>
+      The main difference between the two is that,
+      <br>
+      v-if - Only renders the element to the DOM if the expression passes.
+      <br>
+      v-show - Renders all elements to the DOM and then uses the CSS display property to hide elements if the expression fails.
+      <br>
+      v-show - Does not support v-else, v-else-if
+  </div>
+  <div>
+      <h4>Runable Example:</h4>
       We have parameter <b>isTrue</b>, try change the value by checking the checkbox.
       <div>
         <label class="checkbox">

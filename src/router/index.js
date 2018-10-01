@@ -84,6 +84,11 @@ export default new Router({
           component: vIfAndShow,
         },
         {
+          path: 'modelconditional',
+          name: 'conditional lifecycle',
+          component: vmodelconditional,
+        },
+        {
           path: 'vFor',
           name: 'v-for',
           component: vFor,
@@ -117,11 +122,6 @@ export default new Router({
           path: 'customDirective',
           name: 'custom directive',
           component: vCustom,
-        },
-        {
-          path: 'modelconditional',
-          name: 'v-model conditional',
-          component: vmodelconditional,
         },
       ],
     },

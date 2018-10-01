@@ -5,6 +5,8 @@
       Vue also allows you to register your own custom directives. 
       <br>
       for more information, see vue docs <a href="https://vuejs.org/v2/guide/custom-directive.html">Link</a>
+      <br>
+      or a better example <a href="https://alligator.io/vuejs/custom-directives/">alligator.io</a>
     </div>
 
     <div>

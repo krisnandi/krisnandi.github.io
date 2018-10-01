@@ -35,7 +35,7 @@ export default new Router({
       name: 'directives',
       component: Directives,
       redirect: {
-        name: 'whatIs',
+        name: 'what is?',
       },
       children: [
         {

@@ -1,6 +1,7 @@
 <template>
   <div>
-    <input class="input" type="text" placeholder="auto focus" v-focus>
+     {{ property }}
+    <input class="input" type="text" placeholder="auto focus" v-model="property" v-focus>
   </div>
 </template>
 
@@ -17,6 +18,11 @@ Vue.directive('focuz', {
 })
 
 export default {
+  data () {
+    return {
+      property: '',
+    }
+  },
   directives: {
     focus: {
       // When the bound element is inserted into the DOM...

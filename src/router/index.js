@@ -18,6 +18,7 @@ import vOnModifier from '@/views/directives/vOnModifier'
 import vModel from '@/views/directives/vModel'
 import vModelComponent from '@/views/directives/vModelComponent'
 import vCustom from '@/views/directives/vCustom'
+import vmodelconditional from '@/views/directives/vmodelconditional'
 
 Vue.use(Router)
 
@@ -116,6 +117,11 @@ export default new Router({
           path: 'customDirective',
           name: 'custom directive',
           component: vCustom,
+        },
+        {
+          path: 'modelconditional',
+          name: 'v-model conditional',
+          component: vmodelconditional,
         },
       ],
     },
